@@ -1,87 +1,92 @@
 <!doctype html>
-<html lang="nl">
+<html lang="nl" id="top">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Bouw & Montagebedrijf Rinus van de Velde – Ruwbouw op z’n best.</title>
 
-  <!-- Favicon (klein RVDV logo in goud) -->
+  <!-- Favicon (RVDV goud) -->
   <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="%23F7E7A9"/><stop offset="55%" stop-color="%23D4AF37"/><stop offset="100%" stop-color="%23B0892E"/></linearGradient></defs><rect width="100%" height="100%" fill="%23e9e9e9"/><text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="120" font-weight="900" fill="url(%23g)">RVDV</text></svg>'>
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="bg-concrete">
 
-<header>
+<header class="site-header">
   <div class="container nav">
-    <div class="brand" style="display:flex;gap:12px;align-items:center">
-      <svg width="120" height="34" viewBox="0 0 600 170" role="img" aria-label="RVDV logo">
-        <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#F7E7A9"/>
-          <stop offset="55%" stop-color="#D4AF37"/>
-          <stop offset="100%" stop-color="#B0892E"/>
-        </linearGradient></defs>
-        <text x="0" y="125" font-size="130" font-weight="900" font-family="Arial, Helvetica, sans-serif" fill="url(#g1)">RVDV</text>
+    <div class="brand">
+      <!-- RVDV + vloerelement -->
+      <svg width="150" height="46" viewBox="0 0 600 170" role="img" aria-label="RVDV logo">
+        <defs>
+          <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#F7E7A9"/><stop offset="55%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#B0892E"/>
+          </linearGradient>
+        </defs>
+        <text x="0" y="125" font-size="130" font-weight="900" font-family="Arial, Helvetica, sans-serif" fill="url(#gold)">RVDV</text>
       </svg>
       <strong>Bouw &amp; Montagebedrijf Rinus van de Velde</strong>
     </div>
     <nav>
+      <a href="index.html" class="active">Home</a>
       <a href="projecten.html">Projecten</a>
-      <a href="#over" class="active">Over mij</a>
       <a class="btn btn-gold" href="#contact">Offerte</a>
     </nav>
   </div>
 </header>
 
-<main class="hero">
-  <div class="container">
-    <h1>Ruwbouw op z’n best.</h1>
+<main>
+  <section class="hero container">
+    <!-- Slogan in goud -->
+    <h1 class="gold-text">Ruwbouw op z’n best.</h1>
     <div class="goldbar"></div>
 
-    <!-- Hero-foto bovenaan -->
+    <!-- Hero-foto (zet dit bestand in /images/) -->
     <img class="heroimg" src="images/IMG_5843.jpeg" alt="Etten-Leur – 1e verdiepingsvloer (hero)">
 
-    <p class="lead">Funderingen • Beganegrondvloeren • Ondersteuning • Verdiepingsvloeren • Randbekisting • Afstorten</p>
-
-    <!-- vloerelement icoon -->
-    <svg class="floor-icon" aria-hidden="true" width="220" height="24" viewBox="0 0 220 24">
-      <defs><linearGradient id="f" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="#d4af37"/><stop offset="100%" stop-color="#b0892e"/>
-      </linearGradient></defs>
-      <rect x="0" y="8" width="220" height="8" rx="2" fill="url(#f)"/>
+    <!-- Vloerelement-icoon onder de tekst -->
+    <svg class="floor-icon" aria-hidden="true" width="260" height="26" viewBox="0 0 260 26">
+      <defs>
+        <linearGradient id="floorgrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#B0892E"/>
+        </linearGradient>
+      </defs>
+      <rect x="0" y="9" width="260" height="8" rx="2" fill="url(#floorgrad)"/>
     </svg>
 
-    <p style="margin-top:14px">
+    <p class="lead">
+      Funderingen • Beganegrondvloeren • Ondersteuning • Verdiepingsvloeren • Randbekisting • Afstorten
+    </p>
+
+    <p class="cta-row">
       <a class="btn btn-gold" href="projecten.html">BEKIJK PROJECTEN</a>
       <a class="btn btn-ghost" href="#contact">CONTACT &amp; OFFERTE</a>
     </p>
-  </div>
-</main>
+  </section>
 
-<div class="container">
-  <section id="over" style="margin-top:26px">
+  <section id="over" class="container">
     <h2>Over mij</h2>
     <div class="sep"></div>
 
-    <!-- Werffoto (ronde 2: pas de src aan naar jouw echte foto) -->
-    <img class="heroimg" src="/images/overmij-ettenleur-hero.jpg" alt="Werffoto Etten-Leur (eerste verdiepingsvloer)">
+    <!-- Werffoto (optioneel – vervang zodra je een andere wilt) -->
+    <img class="wideimg" src="images/overmij-ettenleur-hero.jpg" alt="Werffoto (Etten-Leur eerste verdiepingsvloer)">
 
-    <div style="margin-top:14px">
-      <p>Welkom bij <strong>Bouw en Montagebedrijf Rinus van de Velde</strong>. Sinds mijn 18e ben ik actief in de ruwbouw en inmiddels <strong>8 jaar zelfstandig ondernemer</strong> in de betonbouw, met in totaal <strong>14 jaar ervaring</strong> binnen de sector. Dankzij deze ruime ervaring weet ik exact wat er nodig is om ieder project <strong>vakkundig, veilig en volgens planning</strong> af te ronden.</p>
+    <div class="textblock">
+      <p>Welkom bij <strong>Bouw en Montagebedrijf Rinus van de Velde</strong>. Sinds mijn 18e ben ik actief in de ruwbouw en inmiddels <strong>8 jaar zelfstandig ondernemer</strong> in de betonbouw, met in totaal <strong>14 jaar ervaring</strong>. Dankzij die praktijkkennis rond ik ieder project <strong>vakkundig, veilig en volgens planning</strong> af.</p>
       <p><strong>Specialisaties:</strong><br>
-      • Het maken van funderingen (traditioneel en met systeembekisting)<br>
-      • Het plaatsen van beganegrondvloeren en ondersteuningen voor verdiepingsvloeren<br>
-      • Het leggen van verdiepingsvloeren<br>
-      • Het plaatsen van randbekisting<br>
-      • Het afstorten van vloeren</p>
-      <p><strong>Kwaliteit, betrouwbaarheid en vakmanschap</strong> staan bij mij altijd centraal. Of het nu gaat om een groot bouwproject of een kleinschalige opdracht — ik werk met dezelfde inzet, precisie en trots aan elk betonwerk.</p>
-      <p>Actief in <strong>heel Nederland, België</strong> en soms <strong>Duitsland</strong>. In het bezit van <strong>VCA Vol</strong>, zodat ieder project veilig en volgens de geldende normen wordt uitgevoerd.</p>
+        • Funderingen (traditioneel en systeembekisting)<br>
+        • Beganegrondvloeren en ondersteuning voor verdiepingsvloeren<br>
+        • Verdiepingsvloeren leggen<br>
+        • Randbekisting plaatsen<br>
+        • Afstorten van vloeren
+      </p>
+      <p>Actief in <strong>heel Nederland, België</strong> en soms <strong>Duitsland</strong>. In bezit van <strong>VCA Vol</strong>.</p>
     </div>
   </section>
 
-  <section id="contact" style="margin-top:26px">
+  <section id="contact" class="container">
     <h2>Contact &amp; Offerte</h2>
     <div class="sep"></div>
+
     <div class="grid">
       <div class="card">
         <h3>Contact</h3>
@@ -92,24 +97,34 @@
         <p><strong>Werkgebied</strong><br>Heel Nederland, België &amp; soms Duitsland</p>
         <p><strong>Openingstijden</strong><br>Ma–Vr 07:00–19:00 • Za 07:00–17:00 • Zo gesloten</p>
       </div>
+
       <div class="card">
         <h3>Offerte aanvragen</h3>
-        <p>Stuur uw aanvraag en u ontvangt binnen 1 werkdag reactie.</p>
-        <p><a class="btn btn-gold" href="mailto:Rinusvandevelde@live.nl?subject=Offerte%20aanvraag%20via%20rinusvandeveldebouw.nl&body=Naam:%0ATelefoon:%0AProjectlocatie:%0AOmschrijving:">E-MAIL OPENEN</a></p>
+        <p>Stuur uw aanvraag; u ontvangt binnen 1 werkdag reactie.</p>
+        <p>
+          <a class="btn btn-gold"
+             href="mailto:Rinusvandevelde@live.nl?subject=Offerte%20aanvraag%20via%20rinusvandeveldebouw.nl&body=Naam:%0ATelefoon:%0AProjectlocatie:%0AOmschrijving:">
+            E-MAIL OPENEN
+          </a>
+        </p>
       </div>
     </div>
   </section>
-</div>
+</main>
 
-<footer>
-  <div class="footer__in">
+<footer class="site-footer">
+  <div class="footer__in container">
     <p><strong>Bouw &amp; Montagebedrijf Rinus van de Velde</strong><br>
-    Burgemeester van Stapelestraat 9, 4691 DN Tholen — 📞 <a href="tel:+31646117109">06 46117109</a> — ✉️ <a href="mailto:Rinusvandevelde@live.nl?subject=Via%20website%20rinusvandeveldebouw.nl">Rinusvandevelde@live.nl</a><br>
-    KVK 69133794 • BTW NL002296672B46 • VCA VOL</p>
-    <div class="goldbar" style="height:4px;margin:10px 0 0 0"></div>
-    <p class="copy">© 2025 Bouw en Montagebedrijf Rinus van de Velde — Alle rechten voorbehouden</p>
+      Burgemeester van Stapelestraat 9, 4691 DN Tholen — 📞 <a href="tel:+31646117109">06 46117109</a> — ✉️
+      <a href="mailto:Rinusvandevelde@live.nl?subject=Via%20website%20rinusvandeveldebouw.nl">Rinusvandevelde@live.nl</a><br>
+      KVK 69133794 • BTW NL002296672B46 • VCA VOL
+    </p>
+    <div class="goldbar" style="height:4px;margin:12px 0 0 0"></div>
+    <p class="copy">© 2025 Bouw &amp; Montagebedrijf Rinus van de Velde — Alle rechten voorbehouden</p>
   </div>
-  <a href="#top" class="backtotop">↑ TERUG NAAR BOVEN</a>
+
+  <!-- Terug naar boven knop -->
+  <a href="#top" class="backtotop" aria-label="Terug naar boven">↑</a>
 </footer>
 
 </body>
