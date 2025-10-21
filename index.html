@@ -5,29 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bouw & Montagebedrijf Rinus van de Velde – Ruwbouw op z’n best.</title>
 
-  <!-- Koppel de CSS -->
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" type="image/png" href="favicon-256.png">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="bg-concrete">
+<body class="bg-concrete" id="top">
 
   <!-- HEADER -->
   <header class="site-header">
     <div class="container nav">
-      <!-- BRAND rechts -->
-      <div class="brand">
-        <div class="logo">
-          <div class="logo-emblem" aria-hidden="true"></div>
-          <div class="divider" aria-hidden="true"></div>
-        </div>
-        <div class="brandtext">
-          <span class="overline">Bouw en Montagebedrijf</span>
-          <span class="name">Rinus van de Velde</span>
-        </div>
-      </div>
+      <!-- BRAND rechtsboven: compact logo -->
+      <a class="brand" href="#top" aria-label="Homepage">
+        <img src="rvdv_header_logo.svg"
+             alt="RvDV – Bouw en Montagebedrijf Rinus van de Velde"
+             class="brand__img">
+      </a>
 
-      <!-- NAV rechts van/naast brand -->
-      <nav class="mainnav">
+      <!-- NAV rechts -->
+      <nav class="mainnav" aria-label="Hoofdmenu">
         <a href="index.html" class="active">Home</a>
         <a href="projecten.html">Projecten</a>
         <a class="btn btn-gold" href="#contact">Offerte</a>
@@ -35,11 +34,13 @@
     </div>
   </header>
 
-  <!-- HERO / SLOGAN -->
+  <!-- HERO -->
   <main>
     <section class="hero container">
-      <h1 class="gold-text">Ruwbouw op z’n best.</h1>
-      <div class="gold-underline"></div>
+      <!-- Groot gecentreerd logo met beton erachter -->
+      <img src="rvdv_hero_logo.svg"
+           alt="RvDV – Bouw en Montagebedrijf Rinus van de Velde"
+           class="hero__logo">
 
       <p class="lead">
         Funderingen • Beganegrondvloeren • Ondersteuning • Verdiepingsvloeren • Randbekisting • Afstorten
