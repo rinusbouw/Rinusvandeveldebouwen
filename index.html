@@ -2,29 +2,32 @@
 <html lang="nl">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bouw & Montagebedrijf Rinus van de Velde – Ruwbouw op z’n best.</title>
 
-  <!-- Favicon: we gebruiken jouw afbeelding als icoon -->
-  <link rel="icon" href=<img src="images/0F41A85C-9344-449E-A6D5-DCAD73E9B3...png"
-     alt="Bouw en Montagebedrijf Rinus van de Velde – Logo"
-     class="hero__logo">
-
-<link rel="icon" href="images/0F41A85C-9344-449E-A6D5-DCAD73E9B3.png" sizes="any">type="image/png" sizes="any">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css">
+  <!-- Koppel de CSS -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg">
 
-  <!-- Topbar met klein logo + navigatie -->
+<body class="bg-concrete">
+
+  <!-- HEADER -->
   <header class="site-header">
-    <div class="nav container">
-      <a href="#top" class="brand">
-        <img src="images/logo-rvdv.png" alt="RvdV – Bouw en Montagebedrijf Rinus van de Velde" class="brand__img">
-      </a>
+    <div class="container nav">
+      <!-- BRAND rechts -->
+      <div class="brand">
+        <div class="logo">
+          <div class="logo-emblem" aria-hidden="true"></div>
+          <div class="divider" aria-hidden="true"></div>
+        </div>
+        <div class="brandtext">
+          <span class="overline">Bouw en Montagebedrijf</span>
+          <span class="name">Rinus van de Velde</span>
+        </div>
+      </div>
 
-      <nav class="mainnav" aria-label="Hoofdmenu">
+      <!-- NAV rechts van/naast brand -->
+      <nav class="mainnav">
         <a href="index.html" class="active">Home</a>
         <a href="projecten.html">Projecten</a>
         <a class="btn btn-gold" href="#contact">Offerte</a>
@@ -32,47 +35,88 @@
     </div>
   </header>
 
-  <!-- HERO / HEADER met jouw afbeelding -->
-  <section class="hero" id="top">
-    <div class="container hero__in">
-      <img src="images/logo-rvdv.png" alt="RvDV logo – Bouw en Montagebedrijf Rinus van de Velde" class="hero__logo">
-      <h1 class="slogan">Ruwbouw op z’n best.</h1>
+  <!-- HERO / SLOGAN -->
+  <main>
+    <section class="hero container">
+      <h1 class="gold-text">Ruwbouw op z’n best.</h1>
       <div class="gold-underline"></div>
+
+      <p class="lead">
+        Funderingen • Beganegrondvloeren • Ondersteuning • Verdiepingsvloeren • Randbekisting • Afstorten
+      </p>
 
       <p class="cta-row">
         <a class="btn btn-gold" href="projecten.html">BEKIJK PROJECTEN</a>
         <a class="btn btn-ghost" href="#contact">CONTACT &amp; OFFERTE</a>
       </p>
-    </div>
-  </section>
+    </section>
 
-  <!-- Dummy content (optioneel) -->
-  <main class="container">
-    <h2>Over mij</h2>
-    <p>Welkom bij Bouw en Montagebedrijf Rinus van de Velde. Vakwerk in funderingen, beganegrondvloeren, verdiepingsvloeren, randbekisting en afstorten – in heel Nederland, België en soms Duitsland.</p>
+    <!-- OVER MIJ -->
+    <section id="over" class="container">
+      <h2>Over mij</h2>
+      <div class="sep"></div>
 
-    <section id="contact" class="grid">
-      <div class="card">
-        <h3>Contact</h3>
-        <p>Adres<br>Burgemeester van Stapelestraat 9<br>4691 DN Tholen</p>
-        <p>Telefoon<br><a href="tel:+31646117109">06 46117109</a></p>
-        <p>E-mail<br><a href="mailto:Rinusvandevelde@live.nl?subject=Via%20website%20rinusvandeveldebouw.nl">Rinusvandevelde@live.nl</a></p>
-        <p>KVK 69133794 • BTW NL002296672B46 • VCA VOL</p>
+      <div class="textblock">
+        <p>
+          Welkom bij Bouw en Montagebedrijf Rinus van de Velde. Sinds mijn achttiende ben ik actief in de ruwbouw en inmiddels acht jaar zelfstandig ondernemer in de betonbouw, met in totaal veertien jaar ervaring. Door deze brede vakkennis weet ik precies wat er nodig is om ieder project vakkundig, veilig en volgens planning op te leveren.
+        </p>
+
+        <p>
+          Ik ben gespecialiseerd in:
+          <br>• het maken van funderingen (zowel traditioneel als met systeembekisting)
+          <br>• het plaatsen van beganegrondvloeren en ondersteuningen voor verdiepingsvloeren
+          <br>• het leggen van verdiepingsvloeren
+          <br>• het plaatsen van randbekisting
+          <br>• en het afstorten van vloeren
+        </p>
+
+        <p>
+          Betrouwbaarheid, kwaliteit en vakmanschap vormen de basis van mijn werk. Of het nu gaat om een omvangrijk bouwproject of een kleinschalige opdracht: elk project krijgt dezelfde aandacht, precisie en toewijding.
+        </p>
+
+        <p>
+          Ik ben werkzaam in heel Nederland, België en Duitsland, en beschik over een VCA Vol-certificering om de veiligheid en kwaliteit op iedere werf te waarborgen.
+        </p>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Offerte aanvragen</h3>
-        <p>Stuur uw aanvraag; u ontvangt binnen 1 werkdag reactie.</p>
-        <p><a class="btn btn-gold" href="mailto:Rinusvandevelde@live.nl?subject=Offerte%20aanvraag%20via%20rinusvandeveldebouw.nl&body=Naam:%0ATelefoon:%0AProjectlocatie:%0AOmschrijving:">E-MAIL OPENEN</a></p>
+    <!-- CONTACT & OFFERTE -->
+    <section id="contact" class="container">
+      <h2>Contact &amp; Offerte</h2>
+      <div class="sep"></div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Contact</h3>
+          <p>Adres<br>Burgemeester van Stapelestraat 9<br>4691 DN Tholen</p>
+          <p>Telefoon<br><a href="tel:+31646117109">06 46117109</a></p>
+          <p>E-mail<br><a href="mailto:Rinusvandevelde@live.nl?subject=Via%20website%20rinusvandeveldebouw.nl">Rinusvandevelde@live.nl</a></p>
+          <p>KVK 69133794 • BTW NL002296672B46 • VCA VOL</p>
+          <p>Werkgebied<br>Heel Nederland, België en soms Duitsland</p>
+          <p>Openingstijden<br>Ma–Vr 07:00–19:00 • Za 07:00–17:00 • Zo gesloten</p>
+        </div>
+
+        <div class="card">
+          <h3>Offerte aanvragen</h3>
+          <p>Stuur uw aanvraag; u ontvangt binnen 1 werkdag reactie.</p>
+          <p>
+            <a class="btn btn-gold" href="mailto:Rinusvandevelde@live.nl?subject=Offerte%20aanvraag%20via%20rinusvandeveldebouw.nl&body=Naam:%0ATelefoon:%0AProjectlocatie:%0AOmschrijving:">
+              E-MAIL OPENEN
+            </a>
+          </p>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="container">
-      <div class="goldbar"></div>
+    <div class="footer__in container">
+      <div class="goldbar footerbar"></div>
       <p class="copy">© 2025 Bouw &amp; Montagebedrijf Rinus van de Velde — Alle rechten voorbehouden</p>
     </div>
+
+    <a href="#top" class="backtotop" aria-label="Terug naar boven">↑</a>
   </footer>
 
 </body>
