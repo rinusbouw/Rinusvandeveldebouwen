@@ -1,131 +1,91 @@
-/* =========================================================
-   RVDV — STYLESHEET
-   ========================================================= */
-
-/* ---------- DESIGN TOKENS ---------- */
+/* Basis */
 :root{
-  --gold-1:#F7E7A9; /* licht */
-  --gold-2:#D4AF37; /* 24k */
-  --gold-3:#B0892E; /* donker */
+  --bg:#2f2f2f;
   --text:#f2f2f2;
-  --text-dim:#dcdcdc;
-  --bg:#c7c7c7;
-  --container:1200px;
-  --radius:8px;
-  --shadow:0 3px 12px rgba(0,0,0,.35);
+  --muted:#d5d5d5;
+  --gold1:#F7E7A9;
+  --gold2:#D4AF37;
+  --gold3:#B0892E;
 }
 
-/* ---------- BASIS ---------- */
 *{box-sizing:border-box}
-html,body{height:100%}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  color:var(--text);
-  font:16px/1.6 Arial, Helvetica, sans-serif;
-}
-a{color:inherit}
-
-body.bg-concrete{
-  background: url("betonstructuur_1920x1080.jpg") center/cover no-repeat fixed, var(--bg);
+html,body{margin:0;padding:0}
+body.bg{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: #3b3b3b;
 }
 
-/* ---------- LAYOUT HELPERS ---------- */
-.container{max-width:var(--container); margin:0 auto; padding:0 1.5rem}
+/* Containers */
+.container{width:min(1100px, 92%); margin-inline:auto}
 
-/* ---------- HEADER + NAV ---------- */
+/* Topbar */
 .site-header{
-  position:sticky; top:0; z-index:1000;
-  background:rgba(0,0,0,.38);
-  backdrop-filter: blur(4px);
-  box-shadow: var(--shadow);
+  background: linear-gradient(180deg,#444,#383838);
+  border-bottom: 1px solid rgba(0,0,0,.3);
+  position: sticky; top:0; z-index:10;
 }
-.site-header .nav{
-  display:flex; align-items:center; justify-content:flex-end;
-  gap:2rem; padding:14px 22px;
+.nav{
+  display:flex; align-items:center; gap:18px; padding:10px 0;
 }
-
-.brand{display:block}
 .brand__img{
-  height:64px; width:auto; display:block;
-  filter: drop-shadow(0 3px 6px rgba(0,0,0,.4));
+  height:58px; width:auto; display:block;
+  border-radius:4px;
+  box-shadow:0 2px 10px rgba(0,0,0,.35);
 }
-
-.mainnav{display:flex; align-items:center; gap:1rem}
+.mainnav{margin-left:auto; display:flex; gap:16px; align-items:center}
 .mainnav a{
-  text-decoration:none; font-weight:700; padding:.4rem .6rem; border-radius:6px;
-  transition:color .18s ease, background .18s ease, transform .18s ease;
-  color:#fff;
+  color:#ddd; text-decoration:none; font-weight:600; padding:6px 10px;
 }
-.mainnav a:hover,.mainnav a.active{ color:var(--gold-2) }
+.mainnav a.active{color:#fff}
+.btn{display:inline-block; padding:10px 16px; border-radius:10px; text-decoration:none; font-weight:800; letter-spacing:.02em}
+.btn-gold{background: linear-gradient(135deg,var(--gold1),var(--gold2),var(--gold3)); color:#2a2411; box-shadow:0 6px 14px rgba(0,0,0,.35)}
+.btn-ghost{border:2px solid #bbb; color:#eee}
 
-.btn{display:inline-block; text-decoration:none; font-weight:800; border-radius:6px; padding:.55rem 1rem}
-.btn-gold{
-  background:linear-gradient(45deg,var(--gold-1),var(--gold-2),var(--gold-3));
-  color:#222; box-shadow: var(--shadow);
+/* HERO / HEADER met jouw afbeelding */
+.hero{
+  background: radial-gradient(1200px 420px at 50% 0%, rgba(255,255,255,.08), transparent),
+              linear-gradient(180deg, #555 0%, #4a4a4a 60%, #444 100%);
+  padding: 44px 0 36px;
+  border-bottom: 1px solid rgba(0,0,0,.35);
 }
-.btn-gold:hover{ transform:translateY(-1px); filter:brightness(1.06) }
-.btn-ghost{
-  border:2px solid var(--gold-2); color:var(--gold-2); background:transparent;
-}
-.btn-ghost:hover{ background:var(--gold-2); color:#222 }
-
-/* ---------- HERO ---------- */
-.hero{ text-align:center; padding:5rem 1rem 3.5rem }
+.hero__in{ text-align:center }
 .hero__logo{
-  max-width:min(100%, 1000px); height:auto;
-  filter: drop-shadow(0 6px 12px rgba(0,0,0,.35));
-  margin: 0 auto 1.4rem;
+  width:min(1150px, 95%);
+  height:auto;
+  display:block;
+  margin:0 auto 12px;
+  border-radius:6px;
+  box-shadow:0 10px 28px rgba(0,0,0,.45);
 }
-.lead{ color:var(--text-dim); margin:0 auto 2rem; max-width:900px }
-.cta-row a{ margin:.4rem }
+.slogan{
+  margin:16px 0 6px;
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight:900;
+  background: linear-gradient(90deg,var(--gold1),var(--gold2),var(--gold3));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.gold-underline{
+  width:100%;
+  height:4px;
+  background: linear-gradient(90deg,var(--gold1),var(--gold2),var(--gold3));
+  border-radius:2px;
+  margin:8px auto 0;
+}
 
-/* ---------- SECTIES ---------- */
-section{margin:4rem auto}
-h2{
-  color:var(--gold-1); text-align:center; font-size:2rem; font-weight:800; margin:.2rem 0 .5rem
-}
-.sep{
-  width:88px; height:3px; margin:.5rem auto 1.75rem; border-radius:2px;
-  background:linear-gradient(90deg,var(--gold-1),var(--gold-2));
-}
-.textblock{max-width:900px; margin:0 auto; color:#eee; line-height:1.75; font-size:1.05rem}
-
-/* ---------- CONTACT GRID ---------- */
-.grid{
-  display:grid; gap:2rem; align-items:start;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-}
+/* Content */
+h2{margin-top:32px; font-size:28px}
+.grid{display:grid; grid-template-columns:1fr; gap:16px; margin:22px 0 40px}
+@media (min-width:760px){ .grid{grid-template-columns:1fr 1fr} }
 .card{
-  background:rgba(0,0,0,.45); border:1px solid rgba(212,175,55,.18);
-  border-radius:var(--radius); padding:1.5rem; box-shadow:0 2px 8px rgba(0,0,0,.3)
+  background:#4a4a4a; border:1px solid rgba(0,0,0,.35); border-radius:10px; padding:18px;
+  box-shadow:0 8px 18px rgba(0,0,0,.35);
 }
-.card h3{color:var(--gold-1); margin-top:0}
+.card a{ color:#fff }
 
-/* ---------- FOOTER ---------- */
-.site-footer{ text-align:center; padding:2rem 1rem 4rem; background:rgba(0,0,0,.25); margin-top:3rem }
-.footerbar{
-  width:120px; height:4px; margin:0 auto 1rem; border-radius:3px;
-  background:linear-gradient(90deg,var(--gold-1),var(--gold-2),var(--gold-3))
-}
-.copy{font-size:.9rem; color:#cfcfcf}
-
-/* ---------- BACK TO TOP ---------- */
-.backtotop{
-  position:fixed; right:24px; bottom:24px; width:46px; height:46px; border-radius:50%;
-  display:flex; align-items:center; justify-content:center; font-size:1.25rem; font-weight:900; text-decoration:none; color:#222;
-  background:linear-gradient(45deg,var(--gold-1),var(--gold-2)); box-shadow:0 3px 10px rgba(0,0,0,.3);
-  transition: transform .18s ease, box-shadow .18s ease;
-}
-.backtotop:hover{ transform:translateY(-3px); box-shadow:0 6px 16px rgba(0,0,0,.35) }
-
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 980px){
-  .site-header .nav{gap:1.25rem}
-  .brand__img{height:56px}
-}
-@media (max-width: 720px){
-  .site-header .nav{flex-wrap:wrap; justify-content:center}
-  .brand__img{height:50px}
-  .hero{padding-top:4rem}
-}
+/* Footer */
+.site-footer{ padding:24px 0 40px; background:#3f3f3f; margin-top:30px }
+.goldbar{ height:6px; border-radius:3px; background:linear-gradient(90deg,var(--gold1),var(--gold2),var(--gold3)); margin-bottom:14px }
+.copy{ color:#cfcfcf; font-size:14px; text-align:center }
