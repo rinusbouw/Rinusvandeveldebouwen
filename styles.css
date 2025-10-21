@@ -1,106 +1,65 @@
-/* --- Algemene instellingen --- */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #d7d7d7 url('https://www.transparenttextures.com/patterns/concrete-wall.png');
-  background-size: cover;
-  color: #333;
-}
+/* Basis */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#1a1a1a;line-height:1.5}
 
-/* --- Header en navigatie --- */
-header {
-  background: linear-gradient(to right, #777, #999);
-  color: #d4af37;
-  text-align: center;
-  padding: 2rem 1rem;
-  border-bottom: 4px solid #d4af37;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+/* Betonlook + goud */
+.bg-concrete{
+  background:#ececec;
+  background-image:
+    radial-gradient(rgba(255,255,255,.9) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(0,0,0,.04), rgba(255,255,255,.02));
+  background-size:8px 8px, 100% 100%;
 }
+.gold-text{
+  background:linear-gradient(135deg,#F7E7A9 0%, #D4AF37 55%, #B0892E 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  font-weight:900; letter-spacing:.2px;
+}
+.goldbar{height:6px;width:160px;border-radius:4px;
+  background:linear-gradient(90deg,#D4AF37,#F7E7A9,#D4AF37);margin:8px 0 16px}
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 1rem;
-  font-weight: bold;
-  transition: color 0.3s;
-}
+/* Containers & layout */
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+.site-header{position:sticky;top:0;z-index:50;background:rgba(236,236,236,.85);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid rgba(0,0,0,.06)}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:10px 0}
+.brand{display:flex;gap:12px;align-items:center}
 
-nav a:hover,
-nav a.active {
-  color: #d4af37;
-  text-shadow: 0 0 10px #d4af37;
-}
+/* Navigatie */
+nav a{margin-left:14px;text-decoration:none;color:#1a1a1a;padding:6px 8px;border-radius:6px}
+nav a.active{outline:2px solid #d4af37}
+.btn{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none}
+.btn-gold{background:#d4af37;color:#191919;font-weight:700}
+.btn-ghost{border:1px solid #d4af37;color:#191919}
 
-/* --- Secties --- */
-section {
-  padding: 2rem 10%;
-}
+/* Hero */
+.hero{padding:18px 0 10px}
+h1{font-size:clamp(28px,5vw,44px);margin:8px 0 8px}
+.lead{margin:10px 0 14px;font-weight:600}
+.heroimg{width:100%;max-height:520px;object-fit:cover;border-radius:12px;box-shadow:0 18px 40px rgba(0,0,0,.12);}
 
-/* --- Over mij --- */
-.about {
-  background: #f2f2f2;
-  border-left: 6px solid #d4af37;
-  padding: 1.5rem;
-  border-radius: 6px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
+/* Icoon onder titel */
+.floor-icon{display:block;margin:8px 0 6px}
 
-/* --- Knoppen --- */
-button, .btn {
-  background-color: #d4af37;
-  color: #fff;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
-}
+/* Secties */
+h2{margin:22px 0 6px}
+.sep{height:5px;width:140px;background:linear-gradient(90deg,#d4af37,#f5e090,#d4af37);border-radius:3px;margin:8px 0 16px}
+.textblock p{margin:10px 0}
+.wideimg{width:100%;max-height:420px;object-fit:cover;border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.1);}
 
-button:hover, .btn:hover {
-  background-color: #b9972b;
-  box-shadow: 0 0 10px #d4af37;
-}
+/* Cards / grid */
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:#fff;border-radius:12px;padding:16px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
 
-/* --- Footer --- */
-footer {
-  text-align: center;
-  background: #333;
-  color: #d4af37;
-  padding: 1.5rem;
-  margin-top: 2rem;
-}
+/* Footer (géén zwarte balk) */
+.site-footer{background:transparent;border-top:1px solid rgba(0,0,0,.06);margin-top:24px;position:relative}
+.footer__in{padding:18px 0}
+.copy{opacity:.8;font-size:.95rem}
 
-/* --- Projecten / Galerij --- */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
+/* Back to top */
+.backtotop{
+  position:fixed;right:18px;bottom:18px;width:44px;height:44px;line-height:44px;text-align:center;
+  font-size:20px;border-radius:50%;text-decoration:none;color:#111;background:#fff;border:1px solid rgba(0,0,0,.1);
+  box-shadow:0 10px 25px rgba(0,0,0,.18);
 }
-
-.img-zoom {
-  width: 100%;
-  border-radius: 4px;
-  transition: transform 0.4s ease;
-}
-
-.img-zoom:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-}
-
-/* --- Back to top knop --- */
-#backToTop {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #d4af37;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 18px;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
+.backtotop:hover{transform:translateY(-2px)}
