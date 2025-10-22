@@ -5,17 +5,24 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Projecten – Bouw & Montagebedrijf Rinus van de Velde</title>
 
-  <!-- Zelfde favicon -->
+  <!-- Favicon -->
   <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="%23F7E7A9"/><stop offset="55%" stop-color="%23D4AF37"/><stop offset="100%" stop-color="%23B0892E"/></linearGradient></defs><rect width="100%" height="100%" fill="%23e9e9e9"/><text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="120" font-weight="900" fill="url(%23g)">RV</text></svg>'>
 
   <link rel="stylesheet" href="styles.css" />
+  <!-- Extra: snelle masonry-achtige grid + lightbox -->
   <style>
-    /* kleine extra’s voor de galerij */
-    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
     .gallery figure{margin:0;background:rgba(0,0,0,.25);border:1px solid rgba(212,175,55,.18);border-radius:8px;overflow:hidden}
-    .gallery img{display:block;width:100%;height:240px;object-fit:cover;filter:blur(10px);transition:filter .25s ease}
-    .gallery img.is-loaded{filter:blur(0)}
-    h1,h2{color:var(--gold-1)}
+    .gallery img{display:block;width:100%;height:220px;object-fit:cover;filter:blur(12px);transition:filter .3s ease}
+    .gallery img.is-loaded{filter:none}
+    .gallery figcaption{padding:.6rem .8rem;color:#dfdfdf;font-size:.95rem}
+
+    /* lightbox (dialog) */
+    dialog#lightbox{border:none;padding:0;background:transparent}
+    dialog#lightbox::backdrop{background:rgba(0,0,0,.85)}
+    .lightbox__in{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:4vw}
+    .lightbox__img{max-width:100%;max-height:100%;display:block;box-shadow:0 10px 30px rgba(0,0,0,.6)}
+    .lightbox__close{position:fixed;top:14px;right:18px;font:700 28px/1 Arial;color:#fff;text-decoration:none}
   </style>
 </head>
 <body class="bg-concrete">
@@ -39,13 +46,13 @@
   </div>
 </header>
 
-<main class="container">
+<main class="container" id="top">
   <h1>Projecten</h1>
   <div class="sep"></div>
 
   <!-- AMSTERDAM – Hotel A (hellingbaan) -->
   <article class="card" id="amsterdam-hotel-a">
-    <h2>Amsterdam-Noord — Hotel A (hellingbaan)</h2>
+    <h2 style="color:#D4AF37">Amsterdam-Noord — Hotel A (hellingbaan)</h2>
     <p><strong>Werk:</strong> gestorte vloer, traditionele lateien, hellingbaan en ondersteuning.</p>
     <div class="gallery">
       <figure><img src="images/amsterdam/hotelA-hellingbaan/IMG_3906.jpeg" loading="lazy" alt=""></figure>
@@ -57,7 +64,7 @@
 
   <!-- ULESTRATEN — Beganegrondvloer -->
   <article class="card" id="ulestraten-beganegrond">
-    <h2>Ulestraten — Beganegrondvloer</h2>
+    <h2 style="color:#D4AF37">Ulestraten — Beganegrondvloer</h2>
     <p><strong>Werk:</strong> kanaalplaten, betonvloer en isolatieafwerking.</p>
     <div class="gallery">
       <figure><img src="images/ulestraten/beganegrondvloer/IMG_0276.jpeg" loading="lazy" alt=""></figure>
@@ -74,7 +81,7 @@
 
   <!-- ULESTRATEN — 1e verdiepingsvloer -->
   <article class="card" id="ulestraten-verdieping">
-    <h2>Ulestraten — 1e verdiepingsvloer (gestort)</h2>
+    <h2 style="color:#D4AF37">Ulestraten — 1e verdiepingsvloer (gestort)</h2>
     <div class="gallery">
       <figure><img src="images/ulestraten/verdiepingsvloer/IMG_1484.jpeg" loading="lazy" alt=""></figure>
       <figure><img src="images/ulestraten/verdiepingsvloer/IMG_1487.jpeg" loading="lazy" alt=""></figure>
@@ -90,7 +97,7 @@
 
   <!-- SCHIEDAM — De Veste (fundering) -->
   <article class="card" id="schiedam">
-    <h2>Schiedam — De Veste (fundering)</h2>
+    <h2 style="color:#D4AF37">Schiedam — De Veste (fundering)</h2>
     <div class="gallery">
       <figure><img src="images/schiedam/fundering/IMG_4163.jpeg" loading="lazy" alt=""></figure>
       <figure><img src="images/schiedam/fundering/IMG_4164.jpeg" loading="lazy" alt=""></figure>
@@ -99,7 +106,7 @@
 
   <!-- MAASTRICHT — Ondersteuning -->
   <article class="card" id="maastricht">
-    <h2>Maastricht — Ondersteuning</h2>
+    <h2 style="color:#D4AF37">Maastricht — Ondersteuning</h2>
     <div class="gallery">
       <figure><img src="images/maastricht/ondersteuning/IMG_1311.jpeg" loading="lazy" alt=""></figure>
       <figure><img src="images/maastricht/ondersteuning/IMG_1312.jpeg" loading="lazy" alt=""></figure>
@@ -113,7 +120,7 @@
 
   <!-- ETTEN-LEUR — Fundering -->
   <article class="card" id="ettenleur">
-    <h2>Etten-Leur — Fundering</h2>
+    <h2 style="color:#D4AF37">Etten-Leur — Fundering</h2>
     <div class="gallery">
       <figure><img src="images/ettenleur/fundering/IMG_5417.jpeg" loading="lazy" alt=""></figure>
       <figure><img src="images/ettenleur/fundering/IMG_5422.jpeg" loading="lazy" alt=""></figure>
@@ -128,7 +135,7 @@
 
   <!-- EINDHOVEN — Fundering -->
   <article class="card" id="eindhoven">
-    <h2>Eindhoven — Fundering</h2>
+    <h2 style="color:#D4AF37">Eindhoven — Fundering</h2>
     <div class="gallery">
       <figure><img src="images/eindhoven/fundering/20210805_181954_Original.jpeg" loading="lazy" alt=""></figure>
       <figure><img src="images/eindhoven/fundering/20210805_182011_Original.jpeg" loading="lazy" alt=""></figure>
@@ -146,12 +153,30 @@
   <a href="#top" class="backtotop" aria-label="Terug naar boven">↑</a>
 </footer>
 
+<!-- Blur-up & Lightbox -->
 <script>
-  // “Blur-up” wanneer de foto geladen is
+  // blur weg zodra geladen
   document.querySelectorAll('.gallery img').forEach(img=>{
     if (img.complete) img.classList.add('is-loaded');
-    img.addEventListener('load', ()=>img.classList.add('is-loaded'));
+    img.addEventListener('load',()=>img.classList.add('is-loaded'));
+    // lightbox openen op klik
+    img.addEventListener('click', ()=>openLightbox(img.src));
   });
+
+  // simpele lightbox met <dialog>
+  function openLightbox(src){
+    let dlg = document.getElementById('lightbox');
+    if(!dlg){
+      dlg = document.createElement('dialog');
+      dlg.id = 'lightbox';
+      dlg.innerHTML = '<div class="lightbox__in"><img class="lightbox__img" alt=""><a class="lightbox__close" href="#">×</a></div>';
+      document.body.appendChild(dlg);
+      dlg.querySelector('.lightbox__close').addEventListener('click', e=>{e.preventDefault(); dlg.close();});
+      dlg.addEventListener('click', e=>{ if(e.target===dlg) dlg.close(); });
+    }
+    dlg.querySelector('.lightbox__img').src = src;
+    dlg.showModal();
+  }
 </script>
 </body>
 </html>
