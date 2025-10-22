@@ -1,4 +1,4 @@
-/* ===== PROJECTEN OVERZICHT (projecten-index.html) ===== */
+/* ===== PROJECTEN OVERZICHT & FOTO GRID FIX ===== */
 
 .projects-grid {
   display: grid;
@@ -10,23 +10,20 @@
 .project-card {
   position: relative;
   display: block;
-  aspect-ratio: 16 / 10; /* verhouding thumbnail */
+  aspect-ratio: 16 / 10;
   border-radius: 12px;
   overflow: hidden;
   background: #222 center/cover no-repeat;
   background-image: var(--thumb);
   box-shadow: 0 4px 14px rgba(0,0,0,0.35);
-  transform: translateZ(0);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-
 .project-card::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.55));
 }
-
 .project-card h3,
 .project-card .tag {
   position: absolute;
@@ -36,7 +33,6 @@
   color: #fff;
   margin: 0;
 }
-
 .project-card h3 {
   bottom: 12px;
   font-size: 1.05rem;
@@ -44,33 +40,38 @@
   line-height: 1.2;
   text-shadow: 0 1px 4px rgba(0,0,0,0.6);
 }
-
 .project-card .tag {
   top: 12px;
-  display: inline-block;
-  width: auto;
   padding: .25rem .55rem;
   font-size: .75rem;
   font-weight: 800;
-  letter-spacing: .03em;
   background: linear-gradient(45deg, #F7E7A9, #D4AF37, #B0892E);
   color: #222;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.35);
   text-transform: uppercase;
 }
-
 .project-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0,0,0,0.5);
 }
 
-/* Responsief: iets grotere kaarten op brede schermen */
+/* FOTO GRID FIX */
+.card .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.card .grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,.35);
+}
+
+/* Responsive */
 @media (min-width: 900px) {
-  .projects-grid {
-    gap: 2rem;
-  }
-  .project-card h3 {
-    font-size: 1.15rem;
-  }
+  .projects-grid { gap: 2rem; }
+  .project-card h3 { font-size: 1.15rem; }
 }
