@@ -3,92 +3,102 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Projecten – Overzicht | Bouw & Montagebedrijf Rinus van de Velde</title>
+  <title>Bouw & Montagebedrijf Rinus van de Velde – Ruwbouw op z’n best.</title>
 
-  <link rel="icon" href="images/0F41A85C-9344-449E-A6D5-DCAD73E9B3.png" />
-  <link rel="stylesheet" href="styles.css?v=11" />
+  <!-- Favicon (blijft werken, geen bestand nodig) -->
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="%23F7E7A9"/><stop offset="55%" stop-color="%23D4AF37"/><stop offset="100%" stop-color="%23B0892E"/></linearGradient></defs><rect width="100%" height="100%" fill="%23e9e9e9"/><text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="120" font-weight="900" fill="url(%23g)">RVDV</text></svg>'>
+
+  <!-- BELANGRIJK: juiste pad + cache-bypass -->
+  <link rel="stylesheet" href="styles.css?v=12" />
 </head>
-
 <body class="bg-concrete">
 
 <header class="site-header">
   <div class="container nav">
+    <!-- BRAND -->
     <div class="brand">
       <div class="logo">
-        <img src="images/0F41A85C-9344-449E-A6D5-DCAD73E9B3.png" alt="RVDV logo" height="60">
+        <div class="logo-emblem" aria-hidden="true"></div>
+        <div class="divider" aria-hidden="true"></div>
       </div>
       <div class="brandtext">
-        <span class="overline">Bouw & Montagebedrijf</span>
+        <span class="overline">Bouw en Montagebedrijf</span>
         <span class="name">Rinus van de Velde</span>
       </div>
     </div>
 
+    <!-- NAV -->
     <nav class="mainnav">
-      <a href="index.html">Home</a>
-      <a class="active" href="projecten-index.html">Projecten</a>
-      <a class="btn btn-gold" href="index.html#contact">Offerte</a>
+      <a class="active" href="index.html">Home</a>
+      <a href="projecten-index.html">Projecten</a>
+      <a class="btn btn-gold" href="#contact">Offerte</a>
     </nav>
   </div>
 </header>
 
-<section class="hero container">
-  <h1 class="gold-text">Projecten – Overzicht</h1>
-  <div class="gold-underline"></div>
-  <p class="lead">Klik op een project om foto's te bekijken.</p>
-</section>
+<main>
+  <!-- HERO -->
+  <section class="hero container">
+    <h1 class="gold-text">Ruwbouw op z’n best.</h1>
+    <div class="gold-underline"></div>
+    <p class="lead">Funderingen • Beganegrondvloeren • Ondersteuning • Verdiepingsvloeren • Randbekisting • Afstorten</p>
+    <p class="cta-row">
+      <a class="btn btn-gold" href="projecten-index.html">BEKIJK PROJECTEN</a>
+      <a class="btn btn-ghost" href="#contact">CONTACT &amp; OFFERTE</a>
+    </p>
+  </section>
 
-<main class="container">
-  <div class="projects-grid">
+  <!-- OVER MIJ -->
+  <section id="over" class="container">
+    <h2>Over mij</h2>
+    <div class="sep"></div>
+    <div class="textblock">
+      <p>Welkom bij Bouw en Montagebedrijf Rinus van de Velde. Sinds mijn achttiende ben ik actief in de ruwbouw en inmiddels acht jaar zelfstandig ondernemer in de betonbouw, met in totaal veertien jaar ervaring. Door deze brede vakkennis weet ik precies wat er nodig is om ieder project vakkundig, veilig en volgens planning op te leveren.</p>
 
-    <a class="project-card" href="projecten.html#amsterdam"
-       style="--thumb:url('images/amsterdam/hotelA-hellingbaan/IMG_3906.jpeg')">
-      <span class="tag">Amsterdam</span>
-      <h3>Hotel A – hellingbaan</h3>
-    </a>
+      <p>Ik ben gespecialiseerd in:
+      <br>• het maken van funderingen (zowel traditioneel als met systeembekisting)
+      <br>• het plaatsen van beganegrondvloeren en ondersteuningen voor verdiepingsvloeren
+      <br>• het leggen van verdiepingsvloeren
+      <br>• het plaatsen van randbekisting
+      <br>• en het afstorten van vloeren</p>
 
-    <a class="project-card" href="projecten.html#ulestraten-beganegrond"
-       style="--thumb:url('images/ulestraten/beganegrondvloer/IMG_0276.jpeg')">
-      <span class="tag">Ulestraten</span>
-      <h3>Beganegrondvloer</h3>
-    </a>
+      <p>Betrouwbaarheid, kwaliteit en vakmanschap vormen de basis van mijn werk. Of het nu gaat om een omvangrijk bouwproject of een kleinschalige opdracht: elk project krijgt dezelfde aandacht, precisie en toewijding.</p>
 
-    <a class="project-card" href="projecten.html#ulestraten-verdieping"
-       style="--thumb:url('images/ulestraten/verdiepingsvloer/IMG_1484.jpeg')">
-      <span class="tag">Ulestraten</span>
-      <h3>1e Verdiepingsvloer</h3>
-    </a>
+      <p>Ik ben werkzaam in heel Nederland, België en incidenteel in Duitsland, en beschik over een VCA Vol-certificering om de veiligheid en kwaliteit op iedere werf te waarborgen.</p>
+    </div>
+  </section>
 
-    <a class="project-card" href="projecten.html#schiedam"
-       style="--thumb:url('images/schiedam/fundering/IMG_4163.jpeg')">
-      <span class="tag">Schiedam</span>
-      <h3>De Veste – fundering</h3>
-    </a>
+  <!-- CONTACT -->
+  <section id="contact" class="container">
+    <h2>Contact &amp; Offerte</h2>
+    <div class="sep"></div>
 
-    <a class="project-card" href="projecten.html#maastricht"
-       style="--thumb:url('images/maastricht/ondersteuning/IMG_1311.jpeg')">
-      <span class="tag">Maastricht</span>
-      <h3>Ondersteuning</h3>
-    </a>
+    <div class="grid">
+      <div class="card">
+        <h3>Contact</h3>
+        <p>Adres<br>Burgemeester van Stapelestraat 9<br>4691 DN Tholen</p>
+        <p>Telefoon<br><a href="tel:+31646117109">06 46117109</a></p>
+        <p>E-mail<br><a href="mailto:Rinusvandevelde@live.nl?subject=Via%20website%20rinusvandeveldebouw.nl">Rinusvandevelde@live.nl</a></p>
+        <p>KVK 69133794 • BTW NL002296672B46 • VCA VOL</p>
+        <p>Werkgebied<br>Heel Nederland, België en soms Duitsland</p>
+        <p>Openingstijden<br>Ma–Vr 07:00–19:00 • Za 07:00–17:00 • Zo gesloten</p>
+      </div>
 
-    <a class="project-card" href="projecten.html#ettenleur"
-       style="--thumb:url('images/ettenleur/fundering/IMG_5417.jpeg')">
-      <span class="tag">Etten-Leur</span>
-      <h3>Fundering & verdiepingsvloer</h3>
-    </a>
-
-    <a class="project-card" href="projecten.html#eindhoven"
-       style="--thumb:url('images/eindhoven/fundering/20210805_181954_Original.jpeg')">
-      <span class="tag">Eindhoven</span>
-      <h3>Fundering</h3>
-    </a>
-
-  </div>
+      <div class="card">
+        <h3>Offerte aanvragen</h3>
+        <p>Stuur uw aanvraag; u ontvangt binnen 1 werkdag reactie.</p>
+        <p><a class="btn btn-gold" href="mailto:Rinusvandevelde@live.nl?subject=Offerte%20aanvraag%20via%20rinusvandeveldebouw.nl&body=Naam:%0ATelefoon:%0AProjectlocatie:%0AOmschrijving:">E-MAIL OPENEN</a></p>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="site-footer">
-  <div class="footerbar"></div>
-  <p class="copy">© 2025 Bouw & Montagebedrijf Rinus van de Velde — Alle rechten voorbehouden</p>
-  <a href="#top" class="backtotop">↑</a>
+  <div class="footer__in container">
+    <div class="goldbar footerbar"></div>
+    <p class="copy">© 2025 Bouw &amp; Montagebedrijf Rinus van de Velde — Alle rechten voorbehouden</p>
+  </div>
+  <a href="#top" class="backtotop" aria-label="Terug naar boven">↑</a>
 </footer>
 
 </body>
