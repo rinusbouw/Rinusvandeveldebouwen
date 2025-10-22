@@ -5,17 +5,31 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Projecten – Bouw & Montagebedrijf Rinus van de Velde</title>
 
-  <!-- favicon kan later naar je eigen .png, dit werkt alvast -->
-  <link rel="icon" href="images/0F41A85C-9344-449E-A6D5-DCAD73E9B3...jpeg" sizes="any">
+  <!-- Zelfde favicon -->
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="%23F7E7A9"/><stop offset="55%" stop-color="%23D4AF37"/><stop offset="100%" stop-color="%23B0892E"/></linearGradient></defs><rect width="100%" height="100%" fill="%23e9e9e9"/><text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="120" font-weight="900" fill="url(%23g)">RV</text></svg>'>
 
-  <!-- HIER staat je style; dit was de oorzaak dat alles “wit” werd -->
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* kleine extra’s voor de galerij */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+    .gallery figure{margin:0;background:rgba(0,0,0,.25);border:1px solid rgba(212,175,55,.18);border-radius:8px;overflow:hidden}
+    .gallery img{display:block;width:100%;height:240px;object-fit:cover;filter:blur(10px);transition:filter .25s ease}
+    .gallery img.is-loaded{filter:blur(0)}
+    h1,h2{color:var(--gold-1)}
+  </style>
 </head>
-<body>
+<body class="bg-concrete">
 <header class="site-header">
   <div class="container nav">
     <div class="brand">
-      <span class="brandline">Bouw &amp; Montagebedrijf Rinus van de Velde</span>
+      <div class="logo">
+        <div class="logo-emblem" aria-hidden="true"></div>
+        <div class="divider" aria-hidden="true"></div>
+      </div>
+      <div class="brandtext">
+        <span class="overline">Bouw en Montagebedrijf</span>
+        <span class="name">Rinus van de Velde</span>
+      </div>
     </div>
     <nav class="mainnav">
       <a href="index.html">Home</a>
@@ -125,15 +139,19 @@
 </main>
 
 <footer class="site-footer">
-  <p class="copy">© 2025 Bouw &amp; Montagebedrijf Rinus van de Velde — Alle rechten voorbehouden</p>
+  <div class="footer__in container">
+    <div class="goldbar footerbar"></div>
+    <p class="copy">© 2025 Bouw &amp; Montagebedrijf Rinus van de Velde — Alle rechten voorbehouden</p>
+  </div>
+  <a href="#top" class="backtotop" aria-label="Terug naar boven">↑</a>
 </footer>
 
-<!-- Snelle “blur-up”: verwijder blur zodra echte foto geladen is -->
 <script>
-document.querySelectorAll('.gallery img').forEach(img=>{
-  if (img.complete) img.classList.add('is-loaded');
-  img.addEventListener('load',()=>img.classList.add('is-loaded'));
-});
+  // “Blur-up” wanneer de foto geladen is
+  document.querySelectorAll('.gallery img').forEach(img=>{
+    if (img.complete) img.classList.add('is-loaded');
+    img.addEventListener('load', ()=>img.classList.add('is-loaded'));
+  });
 </script>
 </body>
 </html>
