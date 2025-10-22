@@ -1,125 +1,105 @@
-/* ===== PROJECTEN OVERZICHT & FOTO GRID FIX ===== */
+/* =========================
+   RVDV — basis + layout
+   ========================= */
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0 4rem;
-}
-
-.project-card {
-  position: relative;
-  display: block;
-  aspect-ratio: 16 / 10;
-  border-radius: 12px;
-  overflow: hidden;
-  background: #222 center/cover no-repeat;
-  background-image: var(--thumb);
-  box-shadow: 0 4px 14px rgba(0,0,0,0.35);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-.project-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.55));
-}
-.project-card h3,
-.project-card .tag {
-  position: absolute;
-  left: 14px;
-  right: 14px;
-  z-index: 2;
-  color: #fff;
-  margin: 0;
-}
-.project-card h3 {
-  bottom: 12px;
-  font-size: 1.05rem;
-  font-weight: 800;
-  line-height: 1.2;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
-}
-.project-card .tag {
-  top: 12px;
-  padding: .25rem .55rem;
-  font-size: .75rem;
-  font-weight: 800;
-  background: linear-gradient(45deg, #F7E7A9, #D4AF37, #B0892E);
-  color: #222;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.35);
-  text-transform: uppercase;
-}
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+/* Design tokens */
+:root{
+  --gold-1:#F7E7A9;
+  --gold-2:#D4AF37;
+  --gold-3:#B0892E;
+  --ink:#111;
+  --text:#f4f4f4;
+  --text-dim:#d7d7d7;
+  --panel:rgba(0,0,0,.35);
+  --panel-2:rgba(0,0,0,.5);
+  --radius:10px;
+  --shadow:0 8px 30px rgba(0,0,0,.35);
+  --container:1200px;
 }
 
-/* FOTO GRID FIX */
-.card .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
-}
-.card .grid img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0,0,0,.35);
-}
-
-/* Responsive */
-@media (min-width: 900px) {
-  .projects-grid { gap: 2rem; }
-  .project-card h3 { font-size: 1.15rem; }
-}
-/* === FOTO GRID & PERFORMANCE FIX === */
-img { max-width: 100%; height: auto; display: block; }
-
-.card .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem;
+/* Basis */
+*{box-sizing:border-box}
+html,body{height:100%}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--text);
+  font:16px/1.6 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  background:
+    url("images/betonstructuur.jpg") center/cover fixed no-repeat,
+    #bfbfbf;
 }
 
-.card .grid img,
-.card > img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0,0,0,.35);
+/* Helpers */
+.container{max-width:var(--container);margin:0 auto;padding:0 20px}
+
+/* Header + nav */
+.site-header{
+  position:sticky;top:0;z-index:999;
+  backdrop-filter:blur(6px);
+  background:var(--panel);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.site-header .nav{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 8px;
+}
+.brand{
+  display:flex;gap:14px;align-items:center;
+  font-weight:800;letter-spacing:.04em;
+}
+.brand .brandline{opacity:.9}
+.mainnav{display:flex;gap:14px;align-items:center}
+.mainnav a{
+  color:var(--text);text-decoration:none;font-weight:700;
+  padding:6px 10px;border-radius:8px
+}
+.mainnav a.active,.mainnav a:hover{color:var(--gold-2)}
+.btn{display:inline-block;border-radius:10px;font-weight:800;text-decoration:none}
+.btn-gold{
+  padding:.55rem 1rem;
+  background:linear-gradient(45deg,var(--gold-1),var(--gold-2),var(--gold-3));
+  color:#222;box-shadow:var(--shadow)
 }
 
-/* Overzicht-tegels (projecten-index) – veilig laten staan, schaalt mee */
-.projects-grid { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
-  gap: 1.5rem; 
-  margin: 2rem 0 4rem; 
+/* Hero */
+.hero{padding:72px 0 40px;text-align:center}
+.hero h1{
+  margin:0 0 .5rem;font-size:42px;font-weight:900;
+  background:linear-gradient(45deg,var(--gold-1),var(--gold-2),var(--gold-3));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent
 }
-.project-card { 
-  position: relative; display:block; aspect-ratio:16/10; 
-  border-radius: 12px; overflow: hidden; 
-  background: #222 center/cover no-repeat; 
-  background-image: var(--thumb);
-  box-shadow: 0 4px 14px rgba(0,0,0,.35);
-  transition: transform .25s ease, box-shadow .25s ease;
+.gold-underline{width:160px;height:4px;margin:10px auto 18px;border-radius:3px;background:linear-gradient(90deg,var(--gold-2),var(--gold-3))}
+.lead{color:var(--text-dim)}
+
+/* Section / cards */
+section{margin:48px 0}
+h2{margin:.2rem 0 .8rem;text-align:center;color:var(--gold-1)}
+.sep{width:90px;height:3px;margin:0 auto 20px;border-radius:2px;background:linear-gradient(90deg,var(--gold-1),var(--gold-2))}
+.card{
+  background:var(--panel-2);border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--radius);padding:18px;margin:22px 0;box-shadow:var(--shadow)
 }
-.project-card::after {
-  content:""; position:absolute; inset:0;
-  background: linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.55));
+.card h3{margin:.2rem 0 1rem;color:var(--gold-1)}
+
+/* Projecten: responsive grid + snelle thumbnails */
+.gallery{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.gallery figure{margin:0}
+.gallery img{
+  width:100%;aspect-ratio:4/3;object-fit:cover;
+  background:#e9e9e9;border-radius:12px;border:1px solid rgba(0,0,0,.08);
+  box-shadow:0 6px 18px rgba(0,0,0,.25)
 }
-.project-card .tag, .project-card h3 {
-  position:absolute; left:14px; right:14px; z-index:2; color:#fff; margin:0;
+/* LQIP blur – gebruik data-thumb als blur-up */
+.gallery img[data-thumb]{filter:blur(12px);transform:scale(1.01)}
+.gallery img.is-loaded{filter:none;transform:none;transition:filter .2s ease}
+
+/* Footer */
+.site-footer{margin-top:40px;padding:24px 10px;text-align:center;background:rgba(0,0,0,.25)}
+.copy{color:#ddd;font-size:.95rem}
+
+/* Kleine schermen */
+@media (max-width:740px){
+  .hero{padding:60px 0 28px}
+  .hero h1{font-size:32px}
 }
-.project-card .tag {
-  top:12px; font-size:.75rem; font-weight:800; 
-  padding:.25rem .55rem; border-radius:6px;
-  background:linear-gradient(45deg,#F7E7A9,#D4AF37,#B0892E); color:#222;
-  box-shadow:0 2px 6px rgba(0,0,0,.35); text-transform:uppercase;
-}
-.project-card h3 { bottom:12px; font-size:1.05rem; font-weight:800; text-shadow:0 1px 4px rgba(0,0,0,.6) }
-.project-card:hover { transform:translateY(-4px); box-shadow:0 8px 24px rgba(0,0,0,.5) }
