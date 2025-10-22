@@ -1,187 +1,139 @@
 <!doctype html>
-<html lang="nl" id="top">
+<html lang="nl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Projecten – Bouw & Montagebedrijf Rinus van de Velde</title>
 
-  <!-- Favicon (inline goud) -->
-  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="%23F7E7A9"/><stop offset="55%" stop-color="%23D4AF37"/><stop offset="100%" stop-color="%23B0892E"/></linearGradient></defs><rect width="100%" height="100%" fill="%23e9e9e9"/><text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="120" font-weight="900" fill="url(%23g)">RVDV</text></svg>'>
+  <!-- favicon kan later naar je eigen .png, dit werkt alvast -->
+  <link rel="icon" href="images/0F41A85C-9344-449E-A6D5-DCAD73E9B3...jpeg" sizes="any">
 
-  <!-- Globale site-styles (uit je root). De v=23 zorgt dat de cache ververst. -->
-  <link rel="stylesheet" href="/styles.css?v=23" />
-
-  <!-- Mini CSS voor albums (inline zodat je niets anders hoeft te wijzigen) -->
-  <style>
-    .album{margin:2.5rem 0}
-    .album__title{
-      text-align:left; color:var(--gold-1,#F7E7A9);
-      font-size:1.5rem; font-weight:800; margin:0;
-    }
-    .photogrid{
-      --col: 240px;
-      display:grid;
-      grid-template-columns: repeat(auto-fill, minmax(var(--col),1fr));
-      gap: 14px;
-      margin: 1rem 0 1.75rem;
-    }
-    .photo{
-      background: rgba(0,0,0,.15);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 6px 18px rgba(0,0,0,.25);
-    }
-    .photo img{
-      display:block; width:100%; height:auto;
-      transition: transform .25s ease, filter .25s ease;
-    }
-    .photo:hover img{ transform: scale(1.03); filter: saturate(1.1) }
-  </style>
+  <!-- HIER staat je style; dit was de oorzaak dat alles “wit” werd -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
-<body class="bg-concrete">
-
+<body>
 <header class="site-header">
   <div class="container nav">
     <div class="brand">
-      <div class="logo">
-        <div class="logo-emblem" aria-hidden="true"></div>
-        <div class="divider" aria-hidden="true"></div>
-      </div>
-      <div class="brandtext">
-        <span class="overline">Bouw & Montagebedrijf</span>
-        <span class="name">Rinus van de Velde</span>
-      </div>
+      <span class="brandline">Bouw &amp; Montagebedrijf Rinus van de Velde</span>
     </div>
-
     <nav class="mainnav">
-      <a href="/index.html">Home</a>
-      <a class="active" href="/projecten.html">Projecten</a>
-      <a class="btn btn-gold" href="/index.html#contact">Offerte</a>
+      <a href="index.html">Home</a>
+      <a class="active" href="projecten.html">Projecten</a>
+      <a class="btn btn-gold" href="index.html#contact">Offerte</a>
     </nav>
   </div>
 </header>
 
-<section class="hero container">
-  <h1 class="gold-text">Projecten</h1>
-  <div class="gold-underline"></div>
-  <p class="lead">Alle foto’s automatisch gegroepeerd per projectmap uit <code>/images</code>.</p>
-</section>
+<main class="container">
+  <h1>Projecten</h1>
+  <div class="sep"></div>
 
-<main class="container" id="albums-wrap" style="padding-top:.5rem">
-  <!-- JavaScript vult hier automatisch je albums en foto's in -->
-  <div id="photos-error" class="card" style="display:none;margin-top:1rem">
-    <h3>Kon de foto’s niet laden</h3>
-    <p>Ververs de pagina of probeer het later nog eens. (Mogelijke oorzaak: GitHub-API limiet of tijdelijke netwerkstoring.)</p>
-  </div>
+  <!-- AMSTERDAM – Hotel A (hellingbaan) -->
+  <article class="card" id="amsterdam-hotel-a">
+    <h2>Amsterdam-Noord — Hotel A (hellingbaan)</h2>
+    <p><strong>Werk:</strong> gestorte vloer, traditionele lateien, hellingbaan en ondersteuning.</p>
+    <div class="gallery">
+      <figure><img src="images/amsterdam/hotelA-hellingbaan/IMG_3906.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/amsterdam/hotelA-hellingbaan/IMG_3911.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/amsterdam/hotelA-hellingbaan/IMG_3916.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/amsterdam/hotelA-hellingbaan/IMG_3929.jpeg" loading="lazy" alt=""></figure>
+    </div>
+  </article>
+
+  <!-- ULESTRATEN — Beganegrondvloer -->
+  <article class="card" id="ulestraten-beganegrond">
+    <h2>Ulestraten — Beganegrondvloer</h2>
+    <p><strong>Werk:</strong> kanaalplaten, betonvloer en isolatieafwerking.</p>
+    <div class="gallery">
+      <figure><img src="images/ulestraten/beganegrondvloer/IMG_0276.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/ulestraten/beganegrondvloer/IMG_0277.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/ulestraten/beganegrondvloer/IMG_0279.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/ulestraten/beganegrondvloer/IMG_0280.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/ulestraten/beganegrondvloer/IMG_0281.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/ulestraten/beganegrondvloer/IMG_0282.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/ulestraten/beganegrondvloer/IMG_0283.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/ulestraten/beganegrondvloer/IMG_0284.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/ulestraten/beganegrondvloer/IMG_0285.jpeg" loading="lazy" alt=""></figure>
+    </div>
+  </article>
+
+  <!-- ULESTRATEN — 1e verdiepingsvloer -->
+  <article class="card" id="ulestraten-verdieping">
+    <h2>Ulestraten — 1e verdiepingsvloer (gestort)</h2>
+    <div class="gallery">
+      <figure><img src="images/ulestraten/verdiepingsvloer/IMG_1484.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/ulestraten/verdiepingsvloer/IMG_1487.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/ulestraten/verdiepingsvloer/IMG_1489.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/ulestraten/verdiepingsvloer/IMG_1490.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/ulestraten/verdiepingsvloer/IMG_1509.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/ulestraten/verdiepingsvloer/IMG_1510.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/ulestraten/verdiepingsvloer/IMG_1513.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/ulestraten/verdiepingsvloer/IMG_1514.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/ulestraten/verdiepingsvloer/IMG_1515.jpeg" loading="lazy" alt=""></figure>
+    </div>
+  </article>
+
+  <!-- SCHIEDAM — De Veste (fundering) -->
+  <article class="card" id="schiedam">
+    <h2>Schiedam — De Veste (fundering)</h2>
+    <div class="gallery">
+      <figure><img src="images/schiedam/fundering/IMG_4163.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/schiedam/fundering/IMG_4164.jpeg" loading="lazy" alt=""></figure>
+    </div>
+  </article>
+
+  <!-- MAASTRICHT — Ondersteuning -->
+  <article class="card" id="maastricht">
+    <h2>Maastricht — Ondersteuning</h2>
+    <div class="gallery">
+      <figure><img src="images/maastricht/ondersteuning/IMG_1311.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/maastricht/ondersteuning/IMG_1312.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/maastricht/ondersteuning/IMG_1313.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/maastricht/ondersteuning/IMG_1314.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/maastricht/ondersteuning/IMG_1315.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/maastricht/ondersteuning/IMG_1317.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/maastricht/ondersteuning/IMG_1347.jpeg" loading="lazy" alt=""></figure>
+    </div>
+  </article>
+
+  <!-- ETTEN-LEUR — Fundering -->
+  <article class="card" id="ettenleur">
+    <h2>Etten-Leur — Fundering</h2>
+    <div class="gallery">
+      <figure><img src="images/ettenleur/fundering/IMG_5417.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/ettenleur/fundering/IMG_5422.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/ettenleur/fundering/IMG_5442.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/ettenleur/fundering/IMG_5459.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/ettenleur/fundering/IMG_5460.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/ettenleur/fundering/IMG_5490.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/ettenleur/fundering/IMG_5491.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/ettenleur/fundering/IMG_5496.jpeg" loading="lazy" alt=""></figure>
+    </div>
+  </article>
+
+  <!-- EINDHOVEN — Fundering -->
+  <article class="card" id="eindhoven">
+    <h2>Eindhoven — Fundering</h2>
+    <div class="gallery">
+      <figure><img src="images/eindhoven/fundering/20210805_181954_Original.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/eindhoven/fundering/20210805_182011_Original.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/eindhoven/fundering/20210805_182021_Original.jpeg" loading="lazy" alt=""></figure>
+      <figure><img src="images/eindhoven/fundering/20210805_182036_Original.jpeg" loading="lazy" alt=""></figure>
+    </div>
+  </article>
 </main>
 
 <footer class="site-footer">
-  <div class="footer__in container">
-    <div class="footerbar"></div>
-    <p class="copy">© 2025 Bouw &amp; Montagebedrijf Rinus van de Velde — Alle rechten voorbehouden</p>
-  </div>
-  <a href="#top" class="backtotop" aria-label="Terug naar boven">↑</a>
+  <p class="copy">© 2025 Bouw &amp; Montagebedrijf Rinus van de Velde — Alle rechten voorbehouden</p>
 </footer>
 
+<!-- Snelle “blur-up”: verwijder blur zodra echte foto geladen is -->
 <script>
-/* 
-  Projectenpagina met automatische albums:
-  - Leest de mapstructuur van je GitHub repo via de Trees API (branch: main).
-  - Toont ALLE afbeeldingen onder /images/..., gegroepeerd per submap.
-  - Albumnaam = "map1 — map2" als die bestaat, anders "map1".
-  - Voorbeeld: images/amsterdam/hotelA-hellingbaan/IMG_3906.jpeg
-    -> Album: "amsterdam — hotelA-hellingbaan"
-*/
-
-(async function () {
-  const OWNER  = 'rinusbouw';
-  const REPO   = 'Rinusvandeveldebouwen';
-  const BRANCH = 'main';
-  const API    = `https://api.github.com/repos/${OWNER}/${REPO}/git/trees/${BRANCH}?recursive=1`;
-
-  const wrap = document.getElementById('albums-wrap');
-  const err  = document.getElementById('photos-error');
-
-  const isImage = p => /^images\/.+\.(jpe?g|png|gif|webp)$/i.test(p);
-
-  try {
-    const res = await fetch(API, { headers: { 'Accept': 'application/vnd.github+json' }});
-    if (!res.ok) throw new Error('HTTP '+res.status);
-    const data = await res.json();
-
-    const files = (data.tree || [])
-      .filter(n => n.type === 'blob')
-      .map(n => n.path)
-      .filter(isImage)
-      .filter(p => !/\/\.keep$/i.test(p))
-      .sort((a,b) => a.localeCompare(b));
-
-    if (!files.length) {
-      err.style.display='block';
-      err.querySelector('p').textContent = 'Geen afbeeldingen gevonden in /images.';
-      return;
-    }
-
-    // Groepeer per album
-    const albums = new Map();
-    files.forEach(path => {
-      const parts = path.split('/'); // ["images","map1","map2","bestand.jpg"]
-      const p1 = parts[1] || '';
-      const p2 = parts[2] || '';
-      const key = p2 ? `${p1} — ${p2}` : p1; // albumnaam
-      if (!albums.has(key)) albums.set(key, []);
-      albums.get(key).push(path);
-    });
-
-    // Render albums in alfabetische volgorde
-    const sorted = Array.from(albums.entries()).sort((a,b)=>a[0].localeCompare(b[0]));
-
-    const frag = document.createDocumentFragment();
-    sorted.forEach(([albumName, paths]) => {
-      const sec = document.createElement('section');
-      sec.className = 'album';
-
-      // Nettere titel (koppelteken -> spatie)
-      const prettyName = albumName.replace(/-/g,' ');
-
-      // Eerste foto als thumb (optioneel later gebruiken)
-      const first = '/' + paths[0];
-
-      sec.innerHTML = `
-        <h2 class="album__title">${prettyName}</h2>
-        <div class="sep"></div>
-        <div class="photogrid"></div>
-      `;
-
-      const grid = sec.querySelector('.photogrid');
-      const f2 = document.createDocumentFragment();
-
-      paths.forEach(p => {
-        const fig = document.createElement('figure');
-        fig.className = 'photo';
-        const img = new Image();
-        img.loading = 'lazy';
-        img.decoding = 'async';
-        img.fetchPriority = 'low';
-        img.src = '/' + p;               // site-relatief pad naar je GitHub Pages
-        img.alt = p.split('/').pop();    // bestandsnaam
-        fig.appendChild(img);
-        f2.appendChild(fig);
-      });
-
-      grid.appendChild(f2);
-      frag.appendChild(sec);
-    });
-
-    wrap.insertBefore(frag, err);
-  } catch (e) {
-    console.error(e);
-    err.style.display='block';
-  }
-})();
+document.querySelectorAll('.gallery img').forEach(img=>{
+  if (img.complete) img.classList.add('is-loaded');
+  img.addEventListener('load',()=>img.classList.add('is-loaded'));
+});
 </script>
-
 </body>
 </html>
