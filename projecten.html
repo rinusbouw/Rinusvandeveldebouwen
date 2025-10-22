@@ -1,11 +1,13 @@
 <!doctype html>
-<html lang="nl">
+<html lang="nl" id="top">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Projecten – Bouw & Montagebedrijf Rinus van de Velde</title>
-  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="%23F7E7A9"/><stop offset="55%" stop-color="%23D4AF37"/><stop offset="100%" stop-color="%23B0892E"/></linearGradient></defs><rect width="100%" height="100%" fill="%23e9e9e9"/><text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="120" font-weight="900" fill="url(%23g)">RVDV</text></svg>'>
-  <link rel="stylesheet" href="styles.css" />
+
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="%23F7E7A9"/><stop offset="55%" stop-color="%23D4AF37"/><stop offset="100%" stop-color="%23B0892E"/></linearGradient></defs><rect width="100%" height="100%" fill="%23e9e9e9"/><text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="120" font-weight="900" fill="url(%23g)'>RVDV</text></svg>'>
+
+  <link rel="stylesheet" href="styles.css?v=10" />
 </head>
 <body class="bg-concrete">
 
@@ -13,103 +15,134 @@
   <div class="container nav">
     <div class="brand">
       <div class="logo-stack">
-        <svg width="120" height="40" viewBox="0 0 600 170" role="img" aria-label="RVDV"><defs><linearGradient id="gold2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F7E7A9"/><stop offset="55%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#B0892E"/></linearGradient></defs><text x="0" y="125" font-size="120" font-weight="900" font-family="Arial" fill="url(#gold2)">RVDV</text></svg>
-        <svg class="floor-icon" aria-hidden="true" width="120" height="6" viewBox="0 0 150 6"><defs><linearGradient id="f2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#B0892E"/></linearGradient></defs><rect x="0" y="0" width="150" height="6" rx="2" fill="url(#f2)"/></svg>
+        <svg width="150" height="46" viewBox="0 0 600 170" role="img" aria-label="RVDV logo">
+          <defs>
+            <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#F7E7A9"/><stop offset="55%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#B0892E"/>
+            </linearGradient>
+          </defs>
+          <text x="0" y="125" font-size="130" font-weight="900" font-family="Arial, Helvetica, sans-serif" fill="url(#gold)">RVDV</text>
+        </svg>
+        <svg class="floor-icon" aria-hidden="true" width="150" height="6" viewBox="0 0 150 6">
+          <defs><linearGradient id="floorgrad" x1="0" y="0" x2="1" y="0">
+            <stop offset="0%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#B0892E"/>
+          </linearGradient></defs>
+          <rect x="0" y="0" width="150" height="6" rx="2" fill="url(#floorgrad)"/>
+        </svg>
       </div>
-      <strong class="brandline">Projecten</strong>
+      <span class="brandline">Bouw &amp; Montagebedrijf Rinus van de Velde</span>
     </div>
-    <nav class="mainnav">
+
+    <nav class="mainnav" aria-label="Hoofdmenu">
       <a href="index.html">Home</a>
-      <a class="active" href="projecten.html">Projecten</a>
+      <a class="active" href="projecten-index.html">Projecten</a>
       <a class="btn btn-gold" href="index.html#contact">Offerte</a>
     </nav>
   </div>
 </header>
 
+<section class="hero container">
+  <h1 class="gold-text">Projecten</h1>
+  <div class="gold-underline"></div>
+  <p class="lead">Funderingen • Beganegrondvloeren • Ondersteuning • Verdiepingsvloeren • Randbekisting • Afstorten</p>
+</section>
+
 <main class="container">
-  <h1>Projecten</h1>
-  <div class="sep"></div>
 
-  <!-- Etten-Leur -->
-  <article class="card">
-    <h2>Etten-Leur – Gestorte fundering &amp; verdiepingsvloer</h2>
-    <p><strong>Werk:</strong> traditionele fundering, prefab balkon op afschot, 1e verdiepingsvloer (gestort).</p>
-    <div class="grid">
-      <!-- Vul je bestandsnamen exact in (hoofdletters tellen). Voorbeeld: -->
-      <img class="wideimg" src="images/ettenleur/fundering/BESTANDSNAAM1.JPG" alt="Etten-Leur fundering">
-      <img class="wideimg" src="images/ettenleur/verdiepingsvloer/BESTANDSNAAM2.JPG" alt="Etten-Leur 1e verdiepingsvloer">
-      <img class="wideimg" src="images/ettenleur/balkon/BESTANDSNAAM3.JPG" alt="Etten-Leur balkon op afschot">
-    </div>
-  </article>
-
-  <!-- Schiedam -->
-  <article class="card">
-    <h2>Schiedam – De Veste (fundering)</h2>
-    <p><strong>Werk:</strong> fundering (traditioneel / systeembekisting).</p>
-    <div class="grid">
-      <img class="wideimg" src="images/schiedam/fundering/BESTAND1.JPG" alt="Schiedam De Veste fundering">
-      <img class="wideimg" src="images/schiedam/fundering/BESTAND2.JPG" alt="Schiedam De Veste fundering">
-    </div>
-  </article>
-
-  <!-- Amsterdam-Noord – Hotel A -->
-  <article class="card">
-    <h2>Amsterdam-Noord – Hotel A</h2>
+  <article id="amsterdam-hotel-a" class="card">
+    <h3>Amsterdam-Noord — Hotel A (hellingbaan)</h3>
     <p><strong>Werk:</strong> gestorte vloer, traditionele lateien, hellingbaan en ondersteuning.</p>
     <div class="grid">
-      <img class="wideimg" src="images/amsterdam/hotelA-vloer/BESTAND1.JPG" alt="Hotel A gestorte vloer">
-      <img class="wideimg" src="images/amsterdam/hotelA-hellingbaan/BESTAND2.JPG" alt="Hotel A hellingbaan">
-      <img class="wideimg" src="images/amsterdam/hotelA-ondersteuning/BESTAND3.JPG" alt="Hotel A ondersteuning">
+      <img src="images/amsterdam/hotelA-hellingbaan/IMG_3906.jpeg">
+      <img src="images/amsterdam/hotelA-hellingbaan/IMG_3911.jpeg">
+      <img src="images/amsterdam/hotelA-hellingbaan/IMG_3916.jpeg">
+      <img src="images/amsterdam/hotelA-hellingbaan/IMG_3929.jpeg">
     </div>
   </article>
 
-  <!-- Amsterdam-Noord – Hotel B -->
-  <article class="card">
-    <h2>Amsterdam-Noord – Hotel B (wanden)</h2>
-    <p><strong>Werk:</strong> wanden en bekisting.</p>
+  <article id="ulestraten-beganegrond" class="card">
+    <h3>Ulestraten — Beganegrondvloer</h3>
+    <p><strong>Werk:</strong> kanaalplaten, betonvloer en isolatieafwerking.</p>
     <div class="grid">
-      <img class="wideimg" src="images/amsterdam/hotelB-wanden/BESTAND1.JPG" alt="Hotel B wanden">
-      <img class="wideimg" src="images/amsterdam/hotelB-wanden/BESTAND2.JPG" alt="Hotel B wanden">
+      <img src="images/ulestraten/beganegrondvloer/IMG_0276.jpeg">
+      <img src="images/ulestraten/beganegrondvloer/IMG_0279.jpeg">
+      <img src="images/ulestraten/beganegrondvloer/IMG_0283.jpeg">
+      <img src="images/ulestraten/beganegrondvloer/IMG_0285.jpeg">
     </div>
   </article>
 
-  <!-- Maastricht -->
-  <article class="card">
-    <h2>Maastricht – Ondersteuning</h2>
+  <article id="ulestraten-verdieping" class="card">
+    <h3>Ulestraten — Verdiepingsvloer</h3>
+    <p><strong>Werk:</strong> gestorte vloer met bekisting en ondersteuning.</p>
+    <div class="grid">
+      <img src="images/ulestraten/verdiepingsvloer/IMG_1484.jpeg">
+      <img src="images/ulestraten/verdiepingsvloer/IMG_1489.jpeg">
+      <img src="images/ulestraten/verdiepingsvloer/IMG_1490.jpeg">
+      <img src="images/ulestraten/verdiepingsvloer/IMG_1514.jpeg">
+    </div>
+  </article>
+
+  <article id="schiedam-fundering" class="card">
+    <h3>Schiedam — De Veste (fundering)</h3>
+    <p><strong>Werk:</strong> fundering (traditioneel / systeembekisting).</p>
+    <div class="grid">
+      <img src="images/schiedam/fundering/IMG_4163.jpeg">
+      <img src="images/schiedam/fundering/IMG_4164.jpeg">
+    </div>
+  </article>
+
+  <article id="maastricht-ondersteuning" class="card">
+    <h3>Maastricht — Ondersteuning</h3>
     <p><strong>Werk:</strong> ondersteuning verdiepingsvloeren (traditioneel / systeem).</p>
     <div class="grid">
-      <img class="wideimg" src="images/maastricht/ondersteuning/BESTAND1.JPG" alt="Maastricht ondersteuning">
-      <img class="wideimg" src="images/maastricht/ondersteuning/BESTAND2.JPG" alt="Maastricht ondersteuning">
+      <img src="images/maastricht/ondersteuning/IMG_1311.jpeg">
+      <img src="images/maastricht/ondersteuning/IMG_1313.jpeg">
+      <img src="images/maastricht/ondersteuning/IMG_1315.jpeg">
+      <img src="images/maastricht/ondersteuning/IMG_1347.jpeg">
     </div>
   </article>
 
-  <!-- Ulestraten -->
-  <article class="card">
-    <h2>Ulestraten – Geïsoleerde kanaalplaat &amp; gestorte 1e verdiepingsvloer</h2>
-    <p><strong>Werk:</strong> beganegrondvloer (geïsoleerde kanaalplaten) &amp; 1e verdiepingsvloer (gestort).</p>
+  <article id="ettenleur-fundering" class="card">
+    <h3>Etten-Leur — Fundering</h3>
+    <p><strong>Werk:</strong> traditionele fundering (systeembekisting / bekisting).</p>
     <div class="grid">
-      <img class="wideimg" src="images/ulestraten/beganegrondvloer/BESTAND1.JPG" alt="Ulestraten beganegrondvloer">
-      <img class="wideimg" src="images/ulestraten/verdiepingsvloer/BESTAND2.JPG" alt="Ulestraten 1e verdiepingsvloer">
+      <img src="images/ettenleur/fundering/IMG_5417.jpeg">
+      <img src="images/ettenleur/fundering/IMG_5422.jpeg">
+      <img src="images/ettenleur/fundering/IMG_5442.jpeg">
+      <img src="images/ettenleur/fundering/IMG_5459.jpeg">
     </div>
   </article>
 
-  <!-- Eindhoven -->
-  <article class="card">
-    <h2>Eindhoven – Fundering (poeren)</h2>
-    <p><strong>Werk:</strong> poeren en voorbereiding betonconstructies.</p>
+  <article id="ettenleur-verdieping" class="card">
+    <h3>Etten-Leur — Verdiepingsvloer &amp; balkon</h3>
+    <p><strong>Werk:</strong> 1e verdiepingsvloer (gestort) en prefab balkon op afschot.</p>
     <div class="grid">
-      <img class="wideimg" src="images/eindhoven/fundering/BESTAND1.JPG" alt="Eindhoven fundering">
-      <img class="wideimg" src="images/eindhoven/fundering/BESTAND2.JPG" alt="Eindhoven fundering">
+      <img src="images/ettenleur/IMG_5837.jpeg">
+      <img src="images/ettenleur/IMG_5840.jpeg">
+      <img src="images/ettenleur/IMG_6083.jpeg">
     </div>
   </article>
+
+  <article id="eindhoven-fundering" class="card">
+    <h3>Eindhoven — Fundering</h3>
+    <p><strong>Werk:</strong> poeren en betonconstructies (fundering, grondwerk, wapening).</p>
+    <div class="grid">
+      <img src="images/eindhoven/fundering/20210805_181954_Original.jpeg">
+      <img src="images/eindhoven/fundering/20210805_182011_Original.jpeg">
+      <img src="images/eindhoven/fundering/20210805_182036_Original.jpeg">
+      <img src="images/eindhoven/fundering/20210812_174828_Original.jpeg">
+    </div>
+  </article>
+
 </main>
 
 <footer class="site-footer">
   <div class="footer__in container">
-    <div class="goldbar" style="height:4px;margin:0 0 10px"></div>
+    <div class="goldbar footerbar"></div>
     <p class="copy">© 2025 Bouw &amp; Montagebedrijf Rinus van de Velde — Alle rechten voorbehouden</p>
   </div>
   <a href="#top" class="backtotop" aria-label="Terug naar boven">↑</a>
 </footer>
+
 </body>
 </html>
