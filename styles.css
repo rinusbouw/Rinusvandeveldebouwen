@@ -103,3 +103,49 @@ h2{margin:.2rem 0 .8rem;text-align:center;color:var(--gold-1)}
   .hero{padding:60px 0 28px}
   .hero h1{font-size:32px}
 }
+/* --- RV LOGO MET VLOERELEMENT --- */
+.logo-emblem {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(145deg, #f7e7a9 0%, #d4af37 55%, #b0892e 100%);
+  clip-path: polygon(50% 0%, 100% 20%, 100% 75%, 50% 100%, 0% 75%, 0% 20%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Arial Black", sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  color: #3a3322;
+  text-shadow: 0 2px 3px rgba(0,0,0,0.4);
+}
+
+.logo-emblem::after {
+  content: "";
+  position: absolute;
+  bottom: 14px;
+  left: 15%;
+  width: 70%;
+  height: 6px;
+  background: linear-gradient(90deg, #9b7b25 0%, #f7e7a9 50%, #9b7b25 100%);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  transform: skewX(-20deg);
+}
+
+.logo-emblem::before {
+  content: "RV";
+  position: relative;
+  z-index: 2;
+}
+
+/* optioneel: iets kleiner op mobiel */
+@media (max-width:600px){
+  .logo-emblem{
+    width:80px;
+    height:80px;
+    font-size:30px;
+  }
+  .logo-emblem::after{
+    height:4px;
+  }
+}
